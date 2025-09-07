@@ -20,16 +20,7 @@ header {
     align-items: center;
     gap: 200px;
 }
-footer{
-    display: flex;
-    justify-content: flex-end;
-    padding: 2px;
-    gap: 20px;
-    color: white;
-    text-align: right;
-    font-size: 1.1em;
-
-}
+/* Menu de navigation */
 nav {
     display: flex;
     gap: 20px;
@@ -45,6 +36,7 @@ nav a:hover{
     transform: scale(1.1);
 
 }
+/*Style pour les différentes sections*/
 section {
     box-shadow: 0 2px 8px rgba(0 0 0) ;
     padding: 100px;
@@ -52,12 +44,68 @@ section {
     font-family: 'Times New Roman', Times, serif;
     color: white;
     height: 1000px;
+}
+/*Alignement*/
+#Contact {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
 
 }
+/*Style pour la section contact uniquement*/
+#Contact{
+    background: lab(1.68% -0.61 -3.95);
+    border-radius: 10px;
+     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+     color: white;
+}
+/*Style pour la section accueil uniquement*/
+#Accueil {
+    background: lab(1.68% -0.61 -3.95);
+    border-radius: 10px;
+     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+     color: white;
+     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    height: 700px;
+
+}
+ #A-propos {
+    background-color: lab(1.68% -0.61 -3.95);
+    height: 700px;
+}
+/*Positionnement*/
 .container{
     display: flex;
     align-items: baseline;
     flex-direction:row;
+}
+.image {
+    width: 400px;
+    height: 300px;
+    border-radius: 50px;
+
+}
+.picture {
+    border-radius: 300px;
+    width: 200px;
+    height: 200px;
+}
+h1 {
+    font-size: 3.5em;
+}
+.btn{
+    display: inline-block;
+    padding: 12px 25px;
+    background-color:darkslategray;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
 }
 .Projets-section{
     padding: 50px 20px;
@@ -98,57 +146,6 @@ section {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 
 }
-
-.image {
-    width: 400px;
-    height: 300px;
-    border-radius: 50px;
-
-}
-.picture {
-    border-radius: 300px;
-    width: 200px;
-    height: 200px;
-}
-input[type="text"], input[type="email"] {
-    background-color: darkslategray;
-    padding: 15px;
-    width: 500px;
-    border-radius: 100px;
-    
-}
-textarea{
-    background-color: darkslategray;
-    padding: 5px;
-    width: 500px;
-    
-}
-.btn{
-    display: inline-block;
-    padding: 12px 25px;
-    background-color:darkslategray;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 20px;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-}
-.btn :hover {
-    background-color: #0056b3;
-}
-
-button{
-    border-radius: 400px;
-    padding: 20px;
-    width: 200px;
-    background-color:darkslategray;
-    border: none;
-    color: #e0e0e0;
-    overflow: hidden;
-    
-
-}
 #Loisirs {
     display: flex;
     flex-direction: column;
@@ -156,11 +153,6 @@ button{
     padding: 80px 20px;
     color: white;
     text-align: center;
-}
-
-a {
-    color: white;
-    text-decoration: white;
 }
 #Loisirs h2 {
     font: 2.8rem;
@@ -178,9 +170,6 @@ a {
     max-width: 1200px;
     width: 100%;
 
-}
-h1 {
-    font-size: 3.5em;
 }
 .carte {
     background-color:lab(1.68% -0.61 -3.95);
@@ -212,36 +201,47 @@ h1 {
     color: #b0b0b0;
     margin-bottom: 0;
 }
-#Contact {
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
 
+input[type="text"], input[type="email"] {
+    background-color: darkslategray;
+    padding: 15px;
+    width: 500px;
+    border-radius: 100px;
+    
 }
+textarea{
+    background-color: darkslategray;
+    padding: 5px;
+    width: 500px;
+    
+}
+
 .email{
     color:darkslategray;
 }
-#Contact{
-    background: lab(1.68% -0.61 -3.95);
-    border-radius: 10px;
-     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-     color: white;
+a {
+    color: white;
+    text-decoration: white;
 }
-#Accueil {
-    background: lab(1.68% -0.61 -3.95);
-    border-radius: 10px;
-     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-     color: white;
-     display: flex;
-    align-items: center;
-    justify-content: space-between;
+button{
+    border-radius: 400px;
     padding: 20px;
-    height: 700px;
-
+    width: 200px;
+    background-color:darkslategray;
+    border: none;
+    color: #e0e0e0;
+    overflow: hidden;
+    
 }
- #A-propos {
-    background-color: lab(1.68% -0.61 -3.95);
-    height: 700px;
 
+/*Style pour le bas de page*/
+footer{
+    display: flex;
+    justify-content: flex-end;
+    padding: 2px;
+    gap: 20px;
+    color: white;
+    text-align: right;
+    font-size: 1.1em;
 
 }
