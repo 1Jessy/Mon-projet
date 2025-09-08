@@ -104,6 +104,10 @@
                  </div>
               </div>
          </div>
+         <div id="zoom" class="zoom">
+            <span class="fermer">&times;</span>
+            <img class="zoom-contenu" id="zoom-img">
+        </div>
         
         </section>
 
@@ -211,7 +215,32 @@
                 </footer>
             </p>
         </footer>
+
     </main>
+    <script>
+        // Sélection des éléments
+        const zoom = document.getElementById("zoom");
+        const zoomImg = document.getElementById("zoom-img");
+        const fermerBtn = document.querySelector(".fermer");
+        // Récupérer toutes les images dans la section projet
+        const images = document.querySelectorAll(".ImgCard");
+        images.forEach(img => {
+            img.addEventListener("click", () => {
+            zoom.style.display = "block";
+                zoomImg.src = img.src;
+            });
+        });
+        // Fermer quand on clique sur le bouton "fermer"
+        fermerBtn.addEventListener("click", () => {
+            zoom.style.display = "none";
+        });
+        // Fermer quand on clique en dehors de l’image
+        zoom.addEventListener("click", (e) => {
+            if (e.target === zoom) {
+            zoom.style.display = "none";
+            }
+        });
+    </script>
 </body>
 
 </html>
